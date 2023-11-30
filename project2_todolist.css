@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    
+}
+body{
+    background-color: rgb(51, 51, 177);
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+}
+#main{
+    /* border: 2px solid red; */
+    width: 380px;
+    height: 450px;
+}
+.h1{
+    text-align: center;
+    color: aliceblue;
+    font-size: large;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.search{
+    /* border: 4px solid pink; */
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 5fr 1fr;
+}
+input{
+    height: 45px;
+    margin-top: 5%;
+    border-radius: 10%;
+    font-size: larger;
+    text-align: center;
+}
+button{
+    height: 45px;
+    width: 50px 0 0 0;
+    margin-top: 23%;
+    border-radius: 40%;
+    font-size: large;
+}
+ul li{
+    color: white;
+    height: auto;
+    font-size: 25px;
+    padding: 12px 8px 17px 50px;
+    /* border: 2px solid green; */
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(img2.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 17px;
+    left: 20px;
+}
+ul li.checked{
+    text-decoration: line-through;
+    /* color: #555; */
+}
+ul li.checked::before{
+    background-image: url(img5.jpg);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    /* color: aliceblue; */
+    line-height: 40px;
+    text-align: center;
+}
+ul li span:hover{
+    background: gray;
+    border-radius: 50%;
+}
+li {
+    animation-name: crazy;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+}
+
+@keyframes crazy {
+    from{
+        transform: rotate(0deg)
+        /* width: 20px; */
+        /* height: 20px; */
+    }
+    to{
+        transform: rotate(360deg)
+        /* width: 400px; */
+        /* height: 400px; */
+    }
+}
+span {
+    animation-name: crazy;
+    animation-duration: 1s;
+    animation-iteration-count: 5;
+    animation-timing-function: ease-in;
+}
+
+@keyframes crazy {
+    from{
+        transform: rotate(0deg)
+        /* width: 20px; */
+        /* height: 20px; */
+    }
+    to{
+        transform: rotate(360deg)
+        /* width: 400px; */
+        /* height: 400px; */
+    }
+}
+#input-box{
+        animation-name: crazy1;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+    }
+    @keyframes crazy1 {
+        from{
+            width: 20px;
+            /* height: 20px; */
+        }
+        to{
+            width: 100%;
+            /* height: 400px; */
+        }
+    }
